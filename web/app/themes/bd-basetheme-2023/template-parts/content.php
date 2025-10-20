@@ -1,0 +1,66 @@
+<?php
+
+/**
+ * Template part for displaying posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Blackwell_Digital_Base_Theme_2023
+ */
+
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="container blog-article-container">
+		<div class="row mb-5">
+
+			<div class="col-md-7 offset-md-1">
+
+				<header class="entry-header px-0">
+
+					<?php bd_basetheme_2023_entry_header(); ?>
+
+					<?php the_title('<h2 class="entry-title mt-2 mb-3"><a href="' . get_permalink() . '" rel="bookmark">', '</a></h2>'); ?>
+
+				</header><!-- .entry-header -->
+				<div class="entry-content">
+					<?php
+					the_excerpt(
+						sprintf(
+							wp_kses(
+								/* translators: %s: Name of current post. Only visible to screen readers */
+								__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'bd-basetheme-2023'),
+								array(
+									'span' => array(
+										'class' => array(),
+									),
+								)
+							),
+							wp_kses_post(get_the_title())
+						)
+					);
+
+					wp_link_pages(
+						array(
+							'before' => '<div class="page-links">' . esc_html__('Pages:', 'bd-basetheme-2023'),
+							'after'  => '</div>',
+						)
+					);
+					?>
+				</div><!-- .entry-content -->
+				<footer class="entry-footer pb-3">
+					<div class="entry-meta">
+						<?php bd_basetheme_2023_entry_footer(); ?>
+						<?php bd_basetheme_2023_posted_on(); ?>
+					</div><!-- .entry-meta -->
+				</footer>
+			</div>
+
+
+			<div class="col-md-3">
+				<?php the_post_thumbnail('thumbnail', array('class' => 'img-fluid w-100')); ?>
+			</div>
+		</div>
+	</div>
+
+</article><!-- #post-<?php the_ID(); ?> -->

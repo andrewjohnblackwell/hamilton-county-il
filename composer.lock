@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "15a18e04c0c7b03ecea4dc003e222a37",
+    "content-hash": "9d64ccf83c0e0177907822a83abf993e",
     "packages": [
         {
             "name": "andrewjohnblackwell/advanced-custom-fields-pro",
@@ -1704,42 +1704,6 @@
                 "source": "https://github.com/wp-media/wp-rocket"
             },
             "time": "2025-10-14T09:53:43+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/acf-content-analysis-for-yoast-seo",
-            "version": "3.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/acf-content-analysis-for-yoast-seo/",
-                "reference": "tags/3.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/acf-content-analysis-for-yoast-seo.3.2.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/acf-content-analysis-for-yoast-seo/"
-        },
-        {
-            "name": "wpackagist-plugin/wordpress-seo",
-            "version": "24.9",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/24.9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.24.9.zip"
-            },
-            "require": {
-                "composer/installers": "^1.0 || ^2.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
         },
         {
             "name": "wpackagist-theme/twentytwentythree",
