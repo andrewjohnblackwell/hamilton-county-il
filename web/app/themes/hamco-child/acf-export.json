@@ -1,0 +1,630 @@
+[
+	{
+		"key": "group_hamco_theme_options",
+		"title": "Hamilton County Theme Options",
+		"fields": [
+			{
+				"key": "field_utility_bar_tab",
+				"label": "Utility Bar",
+				"name": "",
+				"type": "tab",
+				"placement": "top"
+			},
+			{
+				"key": "field_utility_bar_links",
+				"label": "Utility Bar Links",
+				"name": "utility_bar_links",
+				"type": "repeater",
+				"instructions": "Add links for the top utility bar",
+				"layout": "table",
+				"button_label": "Add Link",
+				"sub_fields": [
+					{
+						"key": "field_utility_link_text",
+						"label": "Link Text",
+						"name": "link_text",
+						"type": "text",
+						"required": 1
+					},
+					{
+						"key": "field_utility_link_url",
+						"label": "Link URL",
+						"name": "link_url",
+						"type": "url",
+						"required": 1
+					},
+					{
+						"key": "field_utility_icon_class",
+						"label": "Icon Class",
+						"name": "icon_class",
+						"type": "text",
+						"instructions": "Font Awesome icon class (e.g., fa-phone, fa-calendar)",
+						"placeholder": "fa-phone"
+					}
+				]
+			},
+			{
+				"key": "field_homepage_hero_tab",
+				"label": "Homepage Hero",
+				"name": "",
+				"type": "tab",
+				"placement": "top"
+			},
+			{
+				"key": "field_homepage_hero_image",
+				"label": "Hero Background Image",
+				"name": "homepage_hero_image",
+				"type": "image",
+				"instructions": "Upload a high-resolution image for the homepage hero background",
+				"return_format": "array",
+				"preview_size": "medium",
+				"library": "all"
+			},
+			{
+				"key": "field_homepage_hero_title",
+				"label": "Hero Title",
+				"name": "homepage_hero_title",
+				"type": "text",
+				"instructions": "Main headline for the homepage hero",
+				"default_value": "Hamilton County"
+			},
+			{
+				"key": "field_homepage_hero_subtitle",
+				"label": "Hero Subtitle",
+				"name": "homepage_hero_subtitle",
+				"type": "text",
+				"instructions": "Subtitle text below the main headline",
+				"default_value": "Serving the Community Since 1821"
+			},
+			{
+				"key": "field_homepage_hero_cta",
+				"label": "Hero Call to Action",
+				"name": "homepage_hero_cta",
+				"type": "link",
+				"instructions": "Button link for the hero section",
+				"return_format": "array"
+			},
+			{
+				"key": "field_hero_quick_links",
+				"label": "Hero Quick Links",
+				"name": "hero_quick_links",
+				"type": "repeater",
+				"instructions": "Optional quick links to display in the hero section",
+				"layout": "table",
+				"button_label": "Add Quick Link",
+				"max": 4,
+				"sub_fields": [
+					{
+						"key": "field_hero_quick_link",
+						"label": "Link",
+						"name": "link",
+						"type": "link",
+						"required": 1,
+						"return_format": "array"
+					},
+					{
+						"key": "field_hero_quick_icon",
+						"label": "Icon",
+						"name": "icon",
+						"type": "text",
+						"instructions": "Font Awesome icon class",
+						"placeholder": "fas fa-file"
+					}
+				]
+			},
+			{
+				"key": "field_property_alert_tab",
+				"label": "Property Alert",
+				"name": "",
+				"type": "tab",
+				"placement": "top"
+			},
+			{
+				"key": "field_property_alert_enabled",
+				"label": "Enable Property Alert",
+				"name": "property_alert_enabled",
+				"type": "true_false",
+				"instructions": "Show the property alert banner on the homepage",
+				"default_value": 0,
+				"ui": 1
+			},
+			{
+				"key": "field_property_alert_text",
+				"label": "Alert Text",
+				"name": "property_alert_text",
+				"type": "textarea",
+				"instructions": "Text to display in the property alert banner",
+				"default_value": "Property Fraud Alert: Protect your property rights by signing up for free notifications when documents are recorded.",
+				"rows": 3,
+				"conditional_logic": [
+					[
+						{
+							"field": "field_property_alert_enabled",
+							"operator": "==",
+							"value": "1"
+						}
+					]
+				]
+			},
+			{
+				"key": "field_property_alert_link",
+				"label": "Alert Link",
+				"name": "property_alert_link",
+				"type": "link",
+				"instructions": "Link for the property alert",
+				"return_format": "array",
+				"conditional_logic": [
+					[
+						{
+							"field": "field_property_alert_enabled",
+							"operator": "==",
+							"value": "1"
+						}
+					]
+				]
+			},
+			{
+				"key": "field_welcome_section_tab",
+				"label": "Welcome Section",
+				"name": "",
+				"type": "tab",
+				"placement": "top"
+			},
+			{
+				"key": "field_welcome_section_enabled",
+				"label": "Enable Welcome Section",
+				"name": "welcome_section_enabled",
+				"type": "true_false",
+				"instructions": "Show the welcome section on the homepage",
+				"default_value": 1,
+				"ui": 1
+			},
+			{
+				"key": "field_welcome_section_image",
+				"label": "Chairman/Official Image",
+				"name": "welcome_section_image",
+				"type": "image",
+				"instructions": "Photo of the chairman or county official",
+				"return_format": "array",
+				"preview_size": "medium",
+				"library": "all",
+				"conditional_logic": [
+					[
+						{
+							"field": "field_welcome_section_enabled",
+							"operator": "==",
+							"value": "1"
+						}
+					]
+				]
+			},
+			{
+				"key": "field_welcome_section_title",
+				"label": "Welcome Title",
+				"name": "welcome_section_title",
+				"type": "text",
+				"instructions": "Welcome section heading",
+				"default_value": "Welcome to Hamilton County",
+				"conditional_logic": [
+					[
+						{
+							"field": "field_welcome_section_enabled",
+							"operator": "==",
+							"value": "1"
+						}
+					]
+				]
+			},
+			{
+				"key": "field_welcome_section_content",
+				"label": "Welcome Content",
+				"name": "welcome_section_content",
+				"type": "wysiwyg",
+				"instructions": "Welcome message content",
+				"tabs": "visual",
+				"toolbar": "basic",
+				"media_upload": 0,
+				"conditional_logic": [
+					[
+						{
+							"field": "field_welcome_section_enabled",
+							"operator": "==",
+							"value": "1"
+						}
+					]
+				]
+			},
+			{
+				"key": "field_welcome_section_button_text",
+				"label": "Button Text",
+				"name": "welcome_section_button_text",
+				"type": "text",
+				"instructions": "Text for the welcome section button",
+				"default_value": "LEARN MORE ABOUT US",
+				"conditional_logic": [
+					[
+						{
+							"field": "field_welcome_section_enabled",
+							"operator": "==",
+							"value": "1"
+						}
+					]
+				]
+			},
+			{
+				"key": "field_welcome_section_button_link",
+				"label": "Button Link",
+				"name": "welcome_section_button_link",
+				"type": "url",
+				"instructions": "URL for the welcome section button",
+				"conditional_logic": [
+					[
+						{
+							"field": "field_welcome_section_enabled",
+							"operator": "==",
+							"value": "1"
+						}
+					]
+				]
+			},
+			{
+				"key": "field_quicklinks_tab",
+				"label": "Quick Links",
+				"name": "",
+				"type": "tab",
+				"placement": "top"
+			},
+			{
+				"key": "field_quicklinks_cards",
+				"label": "Quick Link Cards",
+				"name": "quicklinks_cards",
+				"type": "repeater",
+				"instructions": "Add quick link cards for the homepage",
+				"layout": "table",
+				"button_label": "Add Quick Link",
+				"max": 6,
+				"sub_fields": [
+					{
+						"key": "field_quicklink_title",
+						"label": "Title",
+						"name": "title",
+						"type": "text",
+						"required": 1
+					},
+					{
+						"key": "field_quicklink_url",
+						"label": "URL",
+						"name": "url",
+						"type": "url",
+						"required": 1
+					},
+					{
+						"key": "field_quicklink_icon",
+						"label": "Icon Class",
+						"name": "icon",
+						"type": "text",
+						"instructions": "Font Awesome icon class",
+						"placeholder": "fas fa-file"
+					},
+					{
+						"key": "field_quicklink_description",
+						"label": "Description",
+						"name": "description",
+						"type": "text",
+						"instructions": "Optional short description"
+					}
+				]
+			},
+			{
+				"key": "field_footer_tab",
+				"label": "Footer",
+				"name": "",
+				"type": "tab",
+				"placement": "top"
+			},
+			{
+				"key": "field_courthouse_hours",
+				"label": "Courthouse Hours",
+				"name": "courthouse_hours",
+				"type": "textarea",
+				"instructions": "Operating hours for the courthouse",
+				"default_value": "Monday - Friday\n8:30 AM - 4:30 PM\nClosed on Holidays",
+				"rows": 3
+			},
+			{
+				"key": "field_courthouse_address",
+				"label": "Courthouse Address",
+				"name": "courthouse_address",
+				"type": "textarea",
+				"instructions": "Physical address of the courthouse",
+				"default_value": "100 S Jackson Street\nMcLeansboro, IL 62859",
+				"rows": 2
+			},
+			{
+				"key": "field_courthouse_phone",
+				"label": "Main Phone",
+				"name": "courthouse_phone",
+				"type": "text",
+				"instructions": "Main courthouse phone number",
+				"default_value": "(618) 643-2721"
+			},
+			{
+				"key": "field_footer_departments",
+				"label": "Footer Department Links",
+				"name": "footer_departments",
+				"type": "repeater",
+				"instructions": "Department links for the footer",
+				"layout": "table",
+				"button_label": "Add Department",
+				"sub_fields": [
+					{
+						"key": "field_footer_dept_name",
+						"label": "Department Name",
+						"name": "name",
+						"type": "text",
+						"required": 1
+					},
+					{
+						"key": "field_footer_dept_url",
+						"label": "Department URL",
+						"name": "url",
+						"type": "url",
+						"required": 1
+					}
+				]
+			},
+			{
+				"key": "field_footer_links",
+				"label": "Important Links",
+				"name": "footer_links",
+				"type": "repeater",
+				"instructions": "Important links for the footer",
+				"layout": "table",
+				"button_label": "Add Link",
+				"sub_fields": [
+					{
+						"key": "field_footer_link_text",
+						"label": "Link Text",
+						"name": "text",
+						"type": "text",
+						"required": 1
+					},
+					{
+						"key": "field_footer_link_url",
+						"label": "Link URL",
+						"name": "url",
+						"type": "url",
+						"required": 1
+					}
+				]
+			},
+			{
+				"key": "field_social_media_links",
+				"label": "Social Media Links",
+				"name": "social_media_links",
+				"type": "repeater",
+				"instructions": "Social media profiles",
+				"layout": "table",
+				"button_label": "Add Social Link",
+				"sub_fields": [
+					{
+						"key": "field_social_platform",
+						"label": "Platform",
+						"name": "platform",
+						"type": "select",
+						"choices": {
+							"facebook": "Facebook",
+							"twitter": "Twitter",
+							"instagram": "Instagram",
+							"youtube": "YouTube",
+							"linkedin": "LinkedIn"
+						},
+						"required": 1
+					},
+					{
+						"key": "field_social_url",
+						"label": "Profile URL",
+						"name": "url",
+						"type": "url",
+						"required": 1
+					}
+				]
+			}
+		],
+		"location": [
+			[
+				{
+					"param": "options_page",
+					"operator": "==",
+					"value": "theme-general-settings"
+				}
+			]
+		],
+		"menu_order": 0,
+		"position": "normal",
+		"style": "default",
+		"label_placement": "top",
+		"instruction_placement": "label",
+		"active": true,
+		"show_in_rest": false
+	},
+	{
+		"key": "group_page_hero_fields",
+		"title": "Page Hero Options",
+		"fields": [
+			{
+				"key": "field_hero_background_image",
+				"label": "Hero Background Image",
+				"name": "hero_background_image",
+				"type": "image",
+				"instructions": "Override the featured image for the hero section",
+				"return_format": "array",
+				"preview_size": "medium",
+				"library": "all"
+			},
+			{
+				"key": "field_hero_custom_title",
+				"label": "Custom Hero Title",
+				"name": "hero_custom_title",
+				"type": "text",
+				"instructions": "Override the page title in the hero section"
+			},
+			{
+				"key": "field_hero_subtitle",
+				"label": "Hero Subtitle",
+				"name": "hero_subtitle",
+				"type": "text",
+				"instructions": "Optional subtitle below the hero title"
+			}
+		],
+		"location": [
+			[
+				{
+					"param": "post_type",
+					"operator": "==",
+					"value": "page"
+				}
+			]
+		],
+		"menu_order": 5,
+		"position": "side",
+		"style": "default",
+		"label_placement": "top",
+		"instruction_placement": "label",
+		"active": true,
+		"show_in_rest": false
+	},
+	{
+		"key": "group_department_staff",
+		"title": "Department Staff",
+		"fields": [
+			{
+				"key": "field_department_manager_name",
+				"label": "Department Manager Name",
+				"name": "department_manager_name",
+				"type": "text",
+				"instructions": "Name of the department head or manager"
+			},
+			{
+				"key": "field_department_manager_title",
+				"label": "Manager Title",
+				"name": "department_manager_title",
+				"type": "text",
+				"instructions": "Job title of the department manager"
+			},
+			{
+				"key": "field_department_manager_photo",
+				"label": "Manager Photo",
+				"name": "department_manager_photo",
+				"type": "image",
+				"instructions": "Photo of the department manager",
+				"return_format": "array",
+				"preview_size": "thumbnail",
+				"library": "all"
+			},
+			{
+				"key": "field_department_staff",
+				"label": "Department Staff Members",
+				"name": "department_staff",
+				"type": "repeater",
+				"instructions": "Add staff members for this department",
+				"layout": "row",
+				"button_label": "Add Staff Member",
+				"sub_fields": [
+					{
+						"key": "field_staff_photo",
+						"label": "Photo",
+						"name": "staff_photo",
+						"type": "image",
+						"return_format": "array",
+						"preview_size": "thumbnail",
+						"library": "all",
+						"wrapper": {
+							"width": "25"
+						}
+					},
+					{
+						"key": "field_staff_name",
+						"label": "Name",
+						"name": "staff_name",
+						"type": "text",
+						"required": 1,
+						"wrapper": {
+							"width": "25"
+						}
+					},
+					{
+						"key": "field_staff_title",
+						"label": "Title",
+						"name": "staff_title",
+						"type": "text",
+						"wrapper": {
+							"width": "25"
+						}
+					},
+					{
+						"key": "field_staff_email",
+						"label": "Email",
+						"name": "staff_email",
+						"type": "email",
+						"wrapper": {
+							"width": "25"
+						}
+					},
+					{
+						"key": "field_staff_phone",
+						"label": "Phone",
+						"name": "staff_phone",
+						"type": "text",
+						"wrapper": {
+							"width": "25"
+						}
+					},
+					{
+						"key": "field_staff_fax",
+						"label": "Fax",
+						"name": "staff_fax",
+						"type": "text",
+						"wrapper": {
+							"width": "25"
+						}
+					},
+					{
+						"key": "field_staff_address",
+						"label": "Office Address",
+						"name": "staff_address",
+						"type": "text",
+						"wrapper": {
+							"width": "25"
+						}
+					},
+					{
+						"key": "field_staff_facebook",
+						"label": "Facebook URL",
+						"name": "staff_facebook",
+						"type": "url",
+						"wrapper": {
+							"width": "25"
+						}
+					}
+				]
+			}
+		],
+		"location": [
+			[
+				{
+					"param": "post_type",
+					"operator": "==",
+					"value": "department"
+				}
+			]
+		],
+		"menu_order": 10,
+		"position": "normal",
+		"style": "default",
+		"label_placement": "top",
+		"instruction_placement": "label",
+		"active": true,
+		"show_in_rest": false
+	}
+]

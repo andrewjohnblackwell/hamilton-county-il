@@ -1,0 +1,20 @@
+/*
+Theme Name: Hamilton County Child Theme
+Theme URI: https://hamiltoncountyil.gov
+Author: Blackwell Digital
+Author URI: https://blackwell.digital
+Description: Tailwind-powered child theme of Blackwell Digital Base Theme 2023 for Hamilton County
+Template: bd-basetheme-2023
+Version: 1.0.0
+License: GPL v2 or later
+Text Domain: hamco-child
+*/
+
+/**
+ * This file only contains WordPress theme metadata.
+ * All styles are compiled from src/input.css to assets/css/main.css
+ * 
+ * To build styles:
+ * - Development: npm run dev
+ * - Production: npm run build
+ */

@@ -1,0 +1,27 @@
+SCREENSHOT REQUIRED
+==================
+
+A screenshot.png file is required for the theme to display properly in WordPress admin.
+
+Requirements:
+- Filename: screenshot.png
+- Dimensions: 1200x900 pixels (recommended)
+- Format: PNG
+- Location: Place in the root of the theme directory (/hamco-child/)
+
+The screenshot should show:
+1. The homepage with the new Tailwind design
+2. Hamilton County green color scheme prominently featured
+3. The utility bar and main navigation
+4. Quick links grid section
+5. Welcome section with placeholder image
+6. Footer with multi-column layout
+
+To create the screenshot:
+1. Activate the theme on a staging site
+2. Set up sample content
+3. Take a full-page screenshot
+4. Resize to 1200x900 pixels
+5. Save as screenshot.png in the theme root
+
+Alternative: Use a placeholder image temporarily with the theme name and "Hamilton County Child Theme" text.

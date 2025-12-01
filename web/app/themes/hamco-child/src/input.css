@@ -1,0 +1,370 @@
+/**
+ * Tailwind CSS Source File
+ * Hamilton County Child Theme
+ */
+
+/* Tailwind Base Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Base Styles */
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		@apply font-sans text-gray-800 antialiased pt-10; /* pt-10 for fixed utility bar height */
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-bold leading-tight;
+	}
+
+	a {
+		@apply transition-colors duration-200;
+	}
+
+	/* Screen reader only utility */
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border-width: 0;
+	}
+
+	.sr-only:focus {
+		position: static;
+		width: auto;
+		height: auto;
+		padding: inherit;
+		margin: inherit;
+		overflow: visible;
+		clip: auto;
+		white-space: normal;
+	}
+}
+
+/* Custom Component Styles */
+@layer components {
+	/* Alpine.js cloak directive */
+	[x-cloak] {
+		display: none !important;
+	}
+
+	/* Backdrop Blur Support with Opacity */
+	.backdrop-blur-sm {
+		backdrop-filter: blur(4px);
+		-webkit-backdrop-filter: blur(4px);
+	}
+
+	.backdrop-blur {
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+	}
+
+	.backdrop-blur-md {
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+	}
+
+	/* Navigation bar glass effect */
+	.main-navigation {
+		background-color: rgba(
+			30,
+			41,
+			59,
+			0.85
+		); /* slate-800 with 85% opacity */
+		backdrop-filter: saturate(180%) blur(10px);
+		-webkit-backdrop-filter: saturate(180%) blur(10px);
+	}
+
+	/* Dropdown menu glass effect */
+	.dropdown-menu {
+		background-color: rgba(255, 255, 255, 0.95);
+		backdrop-filter: saturate(180%) blur(10px);
+		-webkit-backdrop-filter: saturate(180%) blur(10px);
+	}
+
+	/* Dropdown transition */
+	.dropdown-menu {
+		transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+	}
+
+	/* Dropdown menu items spacing */
+	.dropdown-menu li {
+		display: block;
+		width: 100%;
+	}
+
+	/* Dropdown visibility on hover */
+	.group:hover .dropdown-menu,
+	.dropdown-trigger:hover + .dropdown-menu,
+	.dropdown-menu:hover {
+		display: block !important;
+		opacity: 1 !important;
+		visibility: visible !important;
+	}
+
+	/* Quick Links Cards */
+	.quick-link-card {
+		@apply bg-green-700 text-white rounded-lg p-6 transition-all duration-300 hover:bg-green-800 hover:shadow-xl;
+	}
+
+	/* Staff Cards */
+	.staff-card {
+		@apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300;
+	}
+
+	/* Sidebar Navigation Items */
+	.sidebar-nav-item {
+		@apply block px-4 py-3 text-white hover:bg-green-800 transition-colors duration-200;
+		color: white !important;
+	}
+
+	/* Utility Bar Links */
+	.utility-link {
+		@apply text-white hover:text-green-400 transition-colors duration-200 px-3;
+	}
+
+	/* Footer Links */
+	.footer-link {
+		@apply text-gray-300 hover:text-white transition-colors duration-200;
+	}
+
+	/* Skip Link */
+	.skip-link {
+		@apply sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-hamco-green text-white p-4 z-50;
+	}
+
+	/* Hero Overlay */
+	.hero-overlay {
+		background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+	}
+
+	/* WordPress Prose Styling */
+	.prose {
+		@apply max-w-none;
+	}
+
+	.prose h1 {
+		@apply text-4xl mb-4;
+	}
+
+	.prose h2 {
+		@apply text-3xl mb-3;
+	}
+
+	.prose h3 {
+		@apply text-2xl mb-2;
+	}
+
+	.prose p {
+		@apply mb-4;
+	}
+
+	.prose a {
+		@apply text-hamco-green hover:text-green-800 underline;
+	}
+
+	.prose ul,
+	.prose ol {
+		@apply mb-4 ml-6;
+	}
+
+	.prose ul {
+		@apply list-disc;
+	}
+
+	.prose ol {
+		@apply list-decimal;
+	}
+
+	.prose li {
+		@apply mb-2;
+	}
+
+	.prose img {
+		@apply rounded-lg shadow-md;
+	}
+
+	.prose blockquote {
+		@apply border-l-4 border-hamco-green pl-4 italic text-gray-600 my-4;
+	}
+
+	/* Buttons */
+	.btn {
+		@apply inline-flex items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
+	}
+
+	.btn-primary {
+		@apply bg-hamco-green text-white hover:bg-green-800 focus:ring-hamco-green;
+	}
+
+	.btn-secondary {
+		@apply bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-600;
+	}
+
+	.btn-outline {
+		@apply border-2 border-hamco-green text-hamco-green hover:bg-hamco-green hover:text-white focus:ring-hamco-green;
+	}
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+	/* Animation Delays */
+	.animation-delay-200 {
+		animation-delay: 200ms;
+	}
+
+	.animation-delay-400 {
+		animation-delay: 400ms;
+	}
+
+	.animation-delay-600 {
+		animation-delay: 600ms;
+	}
+
+	/* Custom Colors as Utilities */
+	.bg-hamco-green {
+		background-color: #006735;
+	}
+
+	.text-hamco-green {
+		color: #006735;
+	}
+
+	.border-hamco-green {
+		border-color: #006735;
+	}
+
+	.bg-navy-dark {
+		background-color: #0d1b2a;
+	}
+
+	.bg-blue-gray-light {
+		background-color: #e8f4f8;
+	}
+
+	/* WordPress Admin Bar Adjustments */
+	.admin-bar .sticky-header {
+		top: 32px;
+	}
+
+	@media screen and (max-width: 782px) {
+		.admin-bar .sticky-header {
+			top: 46px;
+		}
+	}
+}
+
+/* Centered iframe containers */
+.iframe-container,
+.col-md-6.text-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 800px;
+	padding: 2rem;
+}
+
+.iframe-container iframe,
+.col-md-6.text-center iframe {
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+
+/* Responsive iframe wrapper */
+.responsive-iframe-wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.responsive-iframe-wrapper iframe {
+	width: 100%;
+	height: auto;
+	min-height: 500px;
+}
+
+/* Print Styles */
+@media print {
+	.utility-bar,
+	.main-navigation,
+	.site-footer,
+	.sidebar-nav,
+	.no-print {
+		display: none !important;
+	}
+
+	.site-main {
+		max-width: 100% !important;
+	}
+
+	@page {
+		margin: 2cm;
+	}
+}
+
+/* WordPress Specific Overrides */
+@layer base {
+	/* WordPress Alignment Classes */
+	.alignleft {
+		@apply float-left mr-4 mb-4;
+	}
+
+	.alignright {
+		@apply float-right ml-4 mb-4;
+	}
+
+	.aligncenter {
+		@apply mx-auto block;
+	}
+
+	.alignwide {
+		@apply w-full;
+	}
+
+	.alignfull {
+		@apply w-screen relative left-1/2 right-1/2 -mx-[50vw];
+	}
+
+	/* WordPress Gallery */
+	.wp-block-gallery {
+		@apply grid gap-4;
+	}
+
+	/* WordPress Embeds */
+	.wp-block-embed {
+		@apply my-8;
+	}
+
+	/* WordPress Image Captions */
+	.wp-caption {
+		@apply max-w-full;
+	}
+
+	.wp-caption-text {
+		@apply text-sm text-gray-600 italic mt-2;
+	}
+}
