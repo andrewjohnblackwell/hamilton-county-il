@@ -29,3 +29,4 @@ wp-cli.local.yml
 
 !web/app/plugins/gravityformsmailgun
 !web/app/plugins/complianz-gdpr-premium
+!web/app/plugins/the-events-calendar

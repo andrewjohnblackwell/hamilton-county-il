@@ -32,11 +32,11 @@ function cpt_bd_departments()
     );
     $args = array(
         'label' => __('Department Post', 'bd-basetheme-2023'),
-        'description' => __('Department Post roster for Cornerstone Center for Early Learning', 'bd-basetheme-2023'),
+        'description' => __('County government departments and offices', 'bd-basetheme-2023'),
         'labels' => $labels,
         'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'page-attributes'),
         'taxonomies' => array('post_tag'),
-        'hierarchical' => false,
+        'hierarchical' => true,
         'public' => true,
         'show_ui' => true,
         'show_in_menu' => true,
